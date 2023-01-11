@@ -17,7 +17,7 @@ public class JuliansMod
 {
     public static final String MOD_ID = "juliansmod";
     private static final Logger LOGGER = LogUtils.getLogger();
-
+    //Important comment
 
     public JuliansMod()
     {
