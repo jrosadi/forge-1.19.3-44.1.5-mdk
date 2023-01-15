@@ -1,5 +1,7 @@
 {
   "item.juliansmod.zircon": "Zircon",
 
-  "block.juliansmod.zircon_block": "Block of Zircon"
+  "block.juliansmod.zircon_block": "Block of Zircon",
+
+  "item.juliansmod.zircon_pickaxe": "Zircon Pickaxe"
 }
