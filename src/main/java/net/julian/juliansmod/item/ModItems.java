@@ -1,6 +1,7 @@
 package net.julian.juliansmod.item;
 
 import net.julian.juliansmod.JuliansMod;
+import net.julian.juliansmod.item.custom.TNTSwordItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
@@ -18,6 +19,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> ZIRCON_PICKAXE = ITEMS.register("zircon_pickaxe",
             () -> new PickaxeItem(ModTiers.ZIRCON, 1, 1, new Item.Properties()));
+
+    public static final RegistryObject<Item> TNT_SWORD = ITEMS.register("tnt_sword",
+            ()-> new TNTSwordItem(ModTiers.TNT, 1,1,new Item.Properties()));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
