@@ -17,7 +17,7 @@ public class TNTSwordItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack p_43278_, LivingEntity p_43279_, LivingEntity p_43280_) {
-        p_43280_.level.explode(p_43280_, p_43280_.getX(), p_43280_.getY(0.0625D), p_43280_.getZ(), 0, Level.ExplosionInteraction.TNT);
+        p_43280_.level.explode(p_43280_, p_43280_.getX(), p_43280_.getY(0.0625D), p_43280_.getZ(), 1f, Level.ExplosionInteraction.TNT);
 
         return super.hurtEnemy(p_43278_, p_43279_, p_43280_);
     }
