@@ -2,6 +2,7 @@ package net.julian.juliansmod;
 
 import com.mojang.logging.LogUtils;
 import net.julian.juliansmod.block.ModBlocks;
+import net.julian.juliansmod.entity.ModEntitiesTypes;
 import net.julian.juliansmod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +28,7 @@ public class JuliansMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntitiesTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
