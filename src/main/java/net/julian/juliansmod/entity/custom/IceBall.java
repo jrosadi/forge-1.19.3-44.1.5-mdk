@@ -1,20 +1,15 @@
 package net.julian.juliansmod.entity.custom;
 
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.PowderSnowBlock;
 import net.minecraft.world.phys.EntityHitResult;
 
 public class IceBall extends Projectile {
-    protected IceBall(EntityType<? extends Projectile> p_37248_, Level p_37249_) {
+    public IceBall(EntityType<? extends Projectile> p_37248_, Level p_37249_) {
         super(p_37248_, p_37249_);
     }
 
@@ -42,4 +37,6 @@ public class IceBall extends Projectile {
     protected void defineSynchedData() {
 
     }
+
+
 }
