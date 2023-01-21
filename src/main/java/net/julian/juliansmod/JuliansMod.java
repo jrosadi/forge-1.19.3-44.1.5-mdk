@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.julian.juliansmod.block.ModBlocks;
 import net.julian.juliansmod.entity.ModEntitiesTypes;
 import net.julian.juliansmod.item.ModItems;
+import net.julian.juliansmod.entity.render.entity.IceBallRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,6 +32,7 @@ public class JuliansMod
         ModBlocks.register(modEventBus);
         ModEntitiesTypes.register(modEventBus);
 
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -48,6 +51,7 @@ public class JuliansMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntitiesTypes.ICE_BALL.get(), IceBallRenderer::new);
 
         }
     }
