@@ -8,6 +8,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraftforge.network.NetworkHooks;
 
@@ -40,7 +41,13 @@ public class IceBall extends Projectile {
     protected void defineSynchedData() {
 
     }
+    protected void onHitBlock(BlockHitResult p_37239_) {
+        super.onHitBlock(p_37239_);
+        if (!this.level.isClientSide) {
+            this.discard();
+        }
 
+    }
     @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
