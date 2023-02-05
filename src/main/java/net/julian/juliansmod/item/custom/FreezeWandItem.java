@@ -25,9 +25,10 @@ public class FreezeWandItem extends Item {
 
             IceBall iceBall = new IceBall(ModEntitiesTypes.ICE_BALL.get(), p_41432_);
 
+            iceBall.setPos(p_41433_.getX(), p_41433_.getY(), p_41433_.getZ());
             p_41432_.addFreshEntity(iceBall);
 
-            iceBall.shoot(lookVec.x, lookVec.y, lookVec.z, 5,0);
+            iceBall.shoot(lookVec.x, lookVec.y, lookVec.z, 50,0);
         }
         return super.use(p_41432_, p_41433_, p_41434_);
     }

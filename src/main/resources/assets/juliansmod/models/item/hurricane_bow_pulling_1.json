@@ -1,0 +1,6 @@
+{
+    "parent": "juliansmod:item/hurricane_bow",
+    "textures": {
+        "layer0": "juliansmod:item/hurricane_bow_pulling_1"
+    }
+}
